@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
-import './MakeCommentPage.css'; // We'll create this CSS file for styling
-
+import './MakeCommentPage.css'; 
 const CommentPage = ({ onGoBack }) => {
     const [comment, setComment] = useState('');
-    const [rating, setRating] = useState(0); // 0 for no rating yet
+    const [rating, setRating] = useState(0); 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would typically send the comment and rating to a backend
         console.log('Comment submitted:', comment);
         console.log('Rating:', rating);
         alert('Yorumunuz gönderildi! (Your comment has been submitted!)');
         setComment('');
         setRating(0);
-        onGoBack(); // Navigate back after submission
+        onGoBack(); 
     };
 
     return (
@@ -31,7 +29,7 @@ const CommentPage = ({ onGoBack }) => {
                                 className={star <= rating ? 'star-filled' : 'star-empty'}
                                 onClick={() => setRating(star)}
                             >
-                                &#9733; {/* Unicode star character */}
+                                &#9733; {}
                             </span>
                         ))}
                     </div>
