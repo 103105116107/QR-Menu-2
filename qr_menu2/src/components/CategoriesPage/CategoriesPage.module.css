@@ -1,0 +1,167 @@
+/* CategoriesPage için genel stiller */
+.categoriesPage {
+    width: 100%;
+    min-height: 100vh;
+    /* Ekran yüksekliğini kapla */
+    background-color: #f8f8f8;
+    padding-bottom: 90px;
+    /* BottomNavBar için boşluk */
+    box-sizing: border-box;
+}
+
+/* Header Stilleri */
+.appHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    /* Header'ı yukarıda sabit tut */
+    top: 0;
+    z-index: 999;
+}
+
+.appTitle {
+    color: #e53935;
+    /* Kırmızı renk */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.searchButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 10px;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.searchInput {
+    flex-grow: 1;
+    padding: 10px 10px 10px 40px;
+    /* İkon için soldan boşluk */
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+    border-color: #e53935;
+}
+
+.closeSearch {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Main Content Stilleri */
+.mainContent {
+    padding: 20px;
+    /* BottomNavBar ile çakışmaması için padding-bottom */
+    padding-bottom: 90px;
+}
+
+.categoriesContainerVertical {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Kategori öğeleri arası boşluk */
+}
+
+.categoryItem {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    padding: 10px;
+}
+
+.categoryItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.categoryImage {
+    width: 80px;
+    /* Görsel genişliği */
+    height: 80px;
+    /* Görsel yüksekliği */
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.categoryText {
+    flex-grow: 1;
+}
+
+.categoryName {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.noResults {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 50px;
+}
+
+/* Responsiveness for categories page */
+@media (max-width: 480px) {
+    .appHeader {
+        padding: 10px 15px;
+    }
+
+    .appTitle {
+        font-size: 1.5rem;
+    }
+
+    .searchButton {
+        font-size: 1.3rem;
+    }
+
+    .searchInput {
+        padding: 8px 8px 8px 35px;
+    }
+
+    .categoryImage {
+        width: 60px;
+        height: 60px;
+    }
+
+    .categoryName {
+        font-size: 1.1rem;
+    }
+}

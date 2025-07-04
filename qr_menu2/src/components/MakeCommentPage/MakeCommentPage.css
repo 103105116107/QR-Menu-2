@@ -1,0 +1,103 @@
+.comment-page-container {
+    background-color: #ae2727;
+    /* Red background matching the image */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.comment-page-header {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.comment-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rating-section h3,
+.comment-textarea-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.stars {
+    font-size: 2.5em;
+    color: #ccc;
+    /* Empty star color */
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+
+.star-filled {
+    color: gold;
+    /* Filled star color */
+}
+
+.star-empty {
+    color: #ccc;
+    /* Empty star color */
+}
+
+textarea {
+    width: calc(100% - 20px);
+    /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 120px;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+.submit-comment-button {
+    background-color: #ff0000;
+    /* A nice blue for the button */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+    /* Align to the right within the form */
+}
+
+.submit-comment-button:hover {
+    background-color: #b30000;
+}
+
+.back-button {
+    background-color: #ffffff;
+    /* Grey for back button */
+    color: #ae2727;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #f8c8c8;
+}
