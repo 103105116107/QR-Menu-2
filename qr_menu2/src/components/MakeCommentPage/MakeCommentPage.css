@@ -1,6 +1,5 @@
 .comment-page-container {
     background-color: #ae2727;
-    /* Red background matching the image */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -38,7 +37,6 @@
 .stars {
     font-size: 2.5em;
     color: #ccc;
-    /* Empty star color */
     cursor: pointer;
     display: flex;
     gap: 5px;
@@ -46,17 +44,14 @@
 
 .star-filled {
     color: gold;
-    /* Filled star color */
 }
 
 .star-empty {
     color: #ccc;
-    /* Empty star color */
 }
 
 textarea {
     width: calc(100% - 20px);
-    /* Adjust for padding */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -64,12 +59,10 @@ textarea {
     resize: vertical;
     min-height: 120px;
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
 }
 
 .submit-comment-button {
     background-color: #ff0000;
-    /* A nice blue for the button */
     color: white;
     padding: 12px 25px;
     border: none;
@@ -78,7 +71,6 @@ textarea {
     cursor: pointer;
     transition: background-color 0.3s ease;
     align-self: flex-end;
-    /* Align to the right within the form */
 }
 
 .submit-comment-button:hover {
@@ -87,7 +79,6 @@ textarea {
 
 .back-button {
     background-color: #ffffff;
-    /* Grey for back button */
     color: #ae2727;
     padding: 10px 20px;
     border: none;
