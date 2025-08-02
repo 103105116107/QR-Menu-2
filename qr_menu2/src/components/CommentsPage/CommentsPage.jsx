@@ -1,41 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './CommentsPage.module.css';
-
 import { FaStar, FaUserCircle, FaQuoteRight, FaArrowRight } from 'react-icons/fa';
+import axios from 'axios';
 
-const CommentsPage = ({ onMakeCommentClick }) => { // onMakeCommentClick prop'unu alıyoruz
-    const comments = [
-        {
-            id: 1,
-            author: 'Olivia Wilson',
-            rating: 5,
-            text: 'The course is an affordable, self-paced course that teaches you everything you need to know to become a successful web designer. The staff is always friendly and the food is delicious. Highly recommend!'
-        },
-        {
-            id: 2,
-            author: 'Ahmet Yılmaz',
-            rating: 4,
-            text: 'Harika bir deneyim! Yemekler çok lezzetliydi, özellikle tatlılar. Servis de hızlı ve güler yüzlüydü. Tekrar gelmeyi düşünüyorum.'
-        },
-        {
-            id: 3,
-            author: 'Ayşe Demir',
-            rating: 5,
-            text: 'Mekan çok şık, atmosfer harika. Kahveleri ve tatlıları çok başarılı. Çalışanlar çok ilgili ve nazik. Mutlaka denemelisiniz!'
-        },
-        {
-            id: 4,
-            author: 'Mehmet Can',
-            rating: 3,
-            text: 'Yemekler fena değildi ama daha iyi olabilirdi. Fiyatlar biraz yüksek geldi. Genel olarak ortalama bir deneyim. Umarım geliştirirler.'
-        },
-        {
-            id: 5,
-            author: 'Zeynep Kaya',
-            rating: 5,
-            text: 'Bayıldım! Servis kalitesi, lezzetler ve mekanın temizliği tek kelimeyle mükemmeldi. Arkadaşlarıma tavsiye edeceğim.'
-        }
-    ];
+const API_BASE_URL = 'http://localhost:8000';
+
+const CommentsPage = ({ onMakeCommentClick }) => {
+    const [comments, setComments] = useState([]);
+
+    useEffect(() => {
+        const fetchComments = async () => {
+            try {
+                const response = await axios.get(`${API_BASE_URL}/api/comments/`);
+                setComments(response.data);
+            } catch (err) {
+                console.error("Yorumlar yüklenirken hata oluştu:", err);
+            }
+        };
+
+        fetchComments();
+    }, []);
 
     return (
         <div className={styles.commentsPage}>
@@ -64,7 +48,6 @@ const CommentsPage = ({ onMakeCommentClick }) => { // onMakeCommentClick prop'un
             </main>
 
             <footer className={styles.commentFooter}>
-                {/* onClick olayını onMakeCommentClick prop'una bağlıyoruz */}
                 <div className={styles.makeCommentLink} onClick={onMakeCommentClick}>
                     <span>Sen de yorum yap!</span>
                     <FaArrowRight className={styles.arrowIcon} />

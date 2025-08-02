@@ -1,0 +1,5 @@
+{
+    "git.enableStatusBarSync": false,
+    "git.enableSmartCommit": true,
+    "git.enabled": false
+}

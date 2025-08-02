@@ -7,17 +7,17 @@ const BottomNavBar = ({ activeTab, onTabChange }) => {
     const [showPopup, setShowPopup] = useState(null);
 
     const handleItemClick = (item) => {
-        // Eğer aynı sekmeye basılırsa pop-up'ı kapat
+
         if (activeTab === item && (item !== 'home' && item !== 'comment')) {
             setShowPopup(null);
             return;
         }
 
-        if (item === 'home' || item === 'comment') { // home veya comment'e basıldığında pop-up gösterme
-            setShowPopup(null); // Açık bir pop-up varsa kapat
-            onTabChange(item); // Sayfa değişimini tetikle
+        if (item === 'home' || item === 'comment') {
+            setShowPopup(null);
+            onTabChange(item);
         } else {
-            // Diğer butonlar için pop-up'ları göster
+
             setShowPopup(item);
         }
     };

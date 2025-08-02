@@ -1,11 +1,9 @@
-/* src/components/ProductListPage/ProductListPage.module.css */
 .productListPage {
     padding: 1rem;
     background-color: #f8f8f8;
     min-height: calc(100vh - 60px);
-    /* BottomNavBar yüksekliği kadar boşluk bırak */
     padding-bottom: 70px;
-    /* BottomNavBar'ın üstüne gelmemesi için */
+
 }
 
 .header {
@@ -35,7 +33,6 @@
     font-size: 1.8rem;
     color: #333;
     flex-grow: 1;
-    /* Başlığın ortalanması için */
     text-align: center;
     margin: 0;
 }
@@ -69,7 +66,7 @@
     border-radius: 8px;
     object-fit: cover;
     flex-shrink: 0;
-    /* Küçülmesini engelle */
+
 }
 
 .productDetails {
