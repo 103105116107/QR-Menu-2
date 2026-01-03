@@ -25,23 +25,22 @@ Installation and Setup
 For Developers
 Clone the repository:
 
-Bash
+```git clone https://github.com/103105116107/QR-Menu-2.git```
 
-git clone https://github.com/103105116107/QR-Menu-2.git
-cd QR-Menu-2
+```cd QR-Menu-2```
 Setup Backend:
 
-Bash
+```cd backend```
 
-cd backend
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+```pip install -r requirements.txt```
+
+```python manage.py migrate```
+
+```python manage.py runserver```
+
 Start Tunnel:
 
-Bash
-
-ngrok http 8000
+```ngrok http 8000```
 For Administrators (Using the EXE)
 Run qr_server.exe located in the dist/ directory.
 
@@ -52,8 +51,7 @@ Access the management dashboard by appending /admin to the provided URL.
 Packaging
 The server executable is generated using PyInstaller:
 
-Bash
+```pyinstaller --onefile --noconsole run_server.py```
 
-pyinstaller --onefile --noconsole run_server.py
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
