@@ -27,8 +27,8 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/username/project-name.git
-cd project-name
+git clone https://github.com/103105116107/QR-Menu-2.git
+cd QR-Menu-2
 Setup Backend:
 
 Bash
